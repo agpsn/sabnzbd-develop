@@ -4,6 +4,7 @@ FROM ghcr.io/agpsn/alpine-base:latest
 ARG SVERSION
 ARG UVERSION=6.2.8
 ENV PYTHONIOENCODING=utf-8
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN set -xe && \
 	echo "***** update system packages *****" apk upgrade --no-cache && \
